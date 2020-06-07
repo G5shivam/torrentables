@@ -13,6 +13,11 @@
   </video>
 
 <script type="text/javascript">
+const player = new Plyr('video', {captions: {active: true}});
+
+// Expose player so it can be used from the console
+window.player = player;
+
 document.addEventListener('keydown', function() {
   if (event.keyCode == 123) {
     alert("This function has been disabled to prevent you from stealing my code!");
